@@ -1,0 +1,21 @@
+# Supabase CLI config (optional - for local dev and migration tooling)
+# See https://supabase.com/docs/guides/cli/config
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public"]
+
+[db]
+port = 54322
+shadow_port = 54320
+
+# Seed demo mechanics after migrations (e.g. on supabase db reset)
+[db.seed]
+enabled = true
+sql_paths = ['./seed.sql']
+
+[studio]
+enabled = true
+port = 54323
